@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Addin Type="Plugin">
+  <ClassId>{92DDE0B3-A219-4C18-B28F-F2136738F475}</ClassId>
+  <ClientId>{92DDE0B3-A219-4C18-B28F-F2136738F475}</ClientId>
+  <DisplayName>UpdateParamsPlugin</DisplayName>
+  <Description>Update Parameters</Description>
+  <Assembly>UpdateParamsPlugin.dll</Assembly>
+</Addin>

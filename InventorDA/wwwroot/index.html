@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Autodesk Forge Tutorial</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="https://github.com/Autodesk-Forge/learn.forge.viewmodels/raw/master/img/favicon.ico">
+    <!-- Common packages: jQuery, Bootstrap, jsTree -->
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Autodesk Forge Viewer files -->
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    <script src="//unpkg.com/@aspnet/signalr@1.1.0/dist/browser/signalr.min.js"></script>
+    <!-- this project files -->
+    <link href="/css/main.css" rel="stylesheet" />
+    <script src="/js/DesignAutomation.js"></script>
+    <script src="/js/ForgeViewer.js"></script>
+</head>
+
+<body>
+
+    <!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+    <nav class="navbar fixed-top navbar-light" style="background-color: #ddeffc;">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav left">
+                <li>
+                    <a href="http://developer.autodesk.com" target="_blank">
+                        <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="20">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+    <div class="container-fluid fill">
+        <div class="row fill">
+            <div class="col-md-auto">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="rimstyle">Rim Style</label>
+                            <select class="form-control" id="rimstyle">
+                                <option value="Style1">Style - 1</option>
+                                <option value="Style2">Style - 2</option>
+                                <option value="Style3">Style - 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="padding-top:10px">
+                            <label class="font-weight-bold" for="color">Color</label>
+                            <select class="form-control" id="color">
+                                <option value="Titan">Titanium</option>
+                                <option value="Blue">Matte Blue</option>
+                                <option value="Blk">Glossy Black</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="padding-top:10px">
+                            <label class="font-weight-bold" for="diameter">Diameter</label>
+                            <select class="form-control" id="diameter">
+                                <option value="20">20</option>
+                                <option value="18">18</option>
+                                <option value="16">16</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="padding-top:10px">
+                            <label class="font-weight-bold" for="width">Width</label>
+                            <select class="form-control" id="width">
+                                <option value="10">10</option>
+                                <option value="8">8</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div class="col text-center" id="displayImage">
+                            <p style="font-style:italic; margin:0 auto">Raster Image</p>
+                            <img id="img">
+                        </div>
+                        <div style="padding-top:20px;">
+                            <button type="button" id="preview" class="btn btn-primary btn-sm">Generate</button>
+                            <button type="button" id="download" class="btn btn-primary btn-sm" style="float:right">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" col fill" id="forgeViewer3d" style="height:50%"></div>
+                <div class="col fill"  id="forgeViewer2d" style="height:50%"></div>
+            </div>
+            <div class="displayclass" id="displaytext">
+                <p>Generating Design...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
