@@ -110,8 +110,8 @@ namespace InventorDA.Controllers
             if (!activities.Data.Contains(qualifiedActivityId))
             {
                 // define the activity
-                string commandLine = string.Format(@"$(engine.path)\\inventorcoreconsole.exe /al ""$(appbundles[{0}].path)"" ""$(args[inputJson].path)""", APPNAME);
-                Activity activitySpec = new Activity()
+                 string commandLine = string.Format("$(engine.path)\\inventorcoreconsole.exe /al \"$(appbundles[{0}].path)\" \"$(args[inputJson].path)\"", APPNAME);
+                 Activity activitySpec = new Activity()
                 {
                     Id = ACTIVITY_NAME,
                     Appbundles = new List<string>() { string.Format("{0}.{1}+{2}", nickName, APPNAME, ALIAS) },
